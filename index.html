@@ -1,162 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="function.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="icon"
-        href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/220px-Repl.it_logo.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Portfolio</title>
+    <title>Somashekar KC | QA Automation Engineer & SDET</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <div class="container">
+    <!-- Background Elements -->
+    <div class="background-container">
+        <div class="animated-gradient"></div>
+        <div class="animated-grid"></div>
+        <div class="particles" id="particles"></div>
+    </div>
 
-        <!--────────────────Header───────────────-->
-        <header>
-            <!-- <a class="logo" href="#home">
-                <img src="https://newsletter-images--timmy-i-chen.repl.co/logo-light.png" alt="repl logo" />
-            </a> -->
-            <nav>
-                <ul class="nav-bar">
-                    <div class="bg"></div>
-                    <li><a class="nav-link active" href="#home">Home</a></li>
-                    <li><a class="nav-link" href="#projects">Projects</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Soma<span>shekar</span>.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#ai-qa">AI in QA</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-                <div class="hamburger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <!--─────────────────Home────────────────-->
-            <div id="home">
-                <div class="filter"></div>
-                <section class="intro">
-                    <h3>Swathi K.S
-                        <hr>
-                    </h3>
-                    <p>I am a self-motivated, pre-final year engineering student pursuing my BTech degree in Information Science and Engineering. <br>
-                         I am a creative web application devloper   <br>
-      I like to solve problems by using existing engineering approaches. I also love to learn exciting skills and explore emerging   technologies, due to which I joined the coding club in my college called HackClub. </p>
-                    <h3>Skills:
-                        <hr>
-                    </h3>
-                    <div class="skills">
-                        <ul>
-                            <li><a href="https://github.com/Swathi-k-shekar/samplejava"> JAVA</a></li>
-                            <li><a href="https://github.com/Swathi-k-shekar/c-programs"> C</a></li>
-                            <li><a href="https://github.com/Swathi-k-shekar/webpage"> HTML5</a></li>
-                            <li><a href="https://github.com/Swathi-k-shekar/webpage"> CSS3</a></li>
-                            <li><a href="https://github.com/Swathi-k-shekar/simplepy"> PYTHON3</a></li>
-                            <li><a href="https://github.com/Swathi-k-shekar/webpage"> JAVA-SCRIPT</a></li>
-                            <li><a href="https://github.com/Swathi-k-shekar/Machine-Learning"> Machine Learning</a></li>
-                            <!-- <li>MongoDB</li> -->
-                        </ul>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="greeting">Hello, I am</p>
+                    <h1 class="name">Somashekar KC</h1>
+                    <h2 class="roles">
+                        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="tagline">Building scalable automation frameworks and AI-powered QA solutions.</p>
+
+                    <div class="hero-buttons">
+                        <a href="docs/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
                     </div>
-                </section>
+                    <div class="social-links mt-4">
+                        <a href="https://github.com" target="_blank" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!--────social media links─────-->
-
-            <div class="social-media">
-                <!-- <a href="#" target="_blank"><i class='fab fa-codepen'></i></a> -->
-                <a href="https://twitter.com/Swathikshekar" target="_blank"><i class='fab fa-twitter'></i></a>
-                <a href="https://github.com/Swathi-k-shekar" target="_blank"><i class='fab fa-github'></i></a>
-                <a href="https://www.linkedin.com/in/swathi-k-s-296006206/" target="_blank"><i
-                        class='fab fa-linkedin-in'></i></a>
-                <a href="https://www.youtube.com/@Astrophile24" target="_blank"><i class="fab fa-youtube"></i></a>
+        <!-- Interactive QA Lab -->
+        <section id="qa-lab" class="section-padding glass-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Interactive QA Lab</h2>
+                    <p>Experience AI-driven Quality Engineering</p>
+                </div>
+                <div class="qa-lab-grid">
+                    <button class="qa-btn" onclick="openLabModal('mock-interview')">
+                        <span class="icon">🎤</span> Start AI Mock Interview
+                    </button>
+                    <button class="qa-btn" onclick="openLabModal('generate-script')">
+                        <span class="icon">🤖</span> Generate Playwright Script
+                    </button>
+                    <button class="qa-btn" onclick="openLabModal('generate-testcases')">
+                        <span class="icon">📝</span> Generate Test Cases
+                    </button>
+                    <button class="qa-btn" onclick="openLabModal('summarize-bug')">
+                        <span class="icon">🐞</span> Summarize Bug Report
+                    </button>
+                    <button class="qa-btn" onclick="openLabModal('view-dashboard')">
+                        <span class="icon">📊</span> View Automation Dashboard
+                    </button>
+                </div>
             </div>
+        </section>
 
-            </section>
-    </div>
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content glass-card">
+                    <p class="lead-text">
+                        I am an experienced Software Development Engineer in Test (SDET) with 2+ years of experience, currently working at <strong>Cognizant</strong>.
+                    </p>
+                    <ul class="about-highlights">
+                        <li>Built robust Playwright frameworks from scratch to ensure scalable test automation.</li>
+                        <li>Seamlessly integrated automated tests with GitHub Actions for continuous CI/CD pipelines.</li>
+                        <li>Implemented comprehensive Allure Reporting for clear visibility into test execution results.</li>
+                        <li>Pioneered the development of an AI Gemini Assistant to accelerate the QA process.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!--───────────────Projects───────────────-->
-    <div id="projects">
-        <h3>My Projects.
-            <hr>
-        </h3>
-        <p>Here are some of my projects :</p>
-        <div class="work-box">
-            <div class="work">
-                <!--───────────────card───────────────-->
-                <div class="card">
-                    <img class="work-img"
-                        src="atm.png">
-                    <a href="https://github.com/Swathi-k-shekar/JavaProjects/tree/main/BankMangementSystem" target="Astrophile"> 
-                        <div class="work-content">Bank Mangement System using Java <b>SWING</b> Framework</div>
-                    </a>
+        <!-- Achievements -->
+        <section id="achievements" class="section-padding">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <h3 class="counter" data-target="2">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <h3 class="counter" data-target="100">0</h3><span>+</span>
+                        <p>Automated Test Cases</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <h3 class="counter" data-target="1">0</h3>
+                        <p>Framework Built</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <h3 class="counter" data-target="1">0</h3>
+                        <p>AI Assistant</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img class="work-img"
-                        src="math.png">
-                    <a href="https://github.com/Swathi-k-shekar/webpage/tree/main/Maths%20Game" target="Astrophile"> 
-                        <div class="work-content"> Tables Game using <br>  <b>Java Script</b></div>
-                    </a>
-                </div>
-                <div class="card">
-                    <img class="work-img"
-                        src="astro.png">
-                    <a href="https://github.com/Swathi-k-shekar/webpage/tree/main/Astrophile" target="Astrophile"> 
-                        <div class="work-content">Responsive Astrophile site</div>
-                    </a>
-                </div>
-                <div class="card">
-                    <img class="work-img"
-                        src="calender.jpg">
-                    <a href="https://github.com/Swathi-k-shekar/c-programs/blob/main/calender.c" target="calender">
-                        <div class="work-content">Simple calender</div>
-                    </a>
-                </div>
-                
-                <div class="card">
-                    <img class="work-img"
-                        src="photo.png">
-                    <a href="https://github.com/Swathi-k-shekar/webpage/tree/main/gridgallery" target="_blank"> 
-                        <div class="work-content">Photo Gallery </div>
-                    </a>
-                </div>
-             </div>
-        </div>
-        </div>
-    </div>
+            </div>
+        </section>
 
-    <!--──────────────Contact────────────────-->
-    <div id="contact">
-        <!--────social media links─────-->
-        <h3>Contact.
-            <hr>
-        </h3>
-        <p>Feel free to contact me on my social media.</p>
-        <div class="social-media">
-            <!-- <a href="#" target="_blank"><i class='fab fa-codepen'></i></a> -->
-            <a href="https://twitter.com/Swathikshekar" target="_blank"><i class='fab fa-twitter'></i></a>
-            <a href="https://github.com/Swathi-k-shekar" target="_blank"><i class='fab fa-github'></i></a>
-            <a href="https://www.linkedin.com/in/swathi-k-s-296006206/" target="_blank"><i
-                    class='fab fa-linkedin-in'></i></a>
-            <a href="https://www.youtube.com/@Astrophile24" target="_blank"><i class="fab fa-youtube"></i></a>
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Expertise</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card">Playwright</div>
+                    <div class="skill-card glass-card">Java</div>
+                    <div class="skill-card glass-card">JavaScript</div>
+                    <div class="skill-card glass-card">Git</div>
+                    <div class="skill-card glass-card">GitHub Actions</div>
+                    <div class="skill-card glass-card">CI/CD</div>
+                    <div class="skill-card glass-card">API Testing</div>
+                    <div class="skill-card glass-card">Postman</div>
+                    <div class="skill-card glass-card">SQL</div>
+                    <div class="skill-card glass-card">Framework Design</div>
+                    <div class="skill-card glass-card">Prompt Engineering</div>
+                    <div class="skill-card glass-card">AI Automation</div>
+                    <div class="skill-card glass-card">Testing Strategy</div>
+                </div>
+            </div>
+        </section>
 
-        </div>
-    </div>
+        <!-- Experience Timeline -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experience Journey</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Joined Cognizant</h3>
+                            <p>Started my professional journey in QA Automation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Automation Testing</h3>
+                            <p>Mastered core automation concepts and tools.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Built Framework</h3>
+                            <p>Designed and implemented a scalable Playwright framework from scratch.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>GitHub Actions</h3>
+                            <p>Integrated automated testing into CI/CD pipelines.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>AI Project</h3>
+                            <p>Developed an AI Gemini Assistant to optimize QA workflows.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Preparing for SDET</h3>
+                            <p>Expanding expertise in architecture, performance, and advanced automation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image-placeholder">
+                            <span>Playwright Framework</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Playwright Framework</h3>
+                            <p>A robust, scalable automation framework built from scratch using Playwright and JavaScript.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Playwright</span>
+                                <span class="tech-tag">JS</span>
+                                <span class="tech-tag">Allure</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+                                <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            </div>
+                            <button class="expand-btn" onclick="toggleDetails('proj1')">View Details ↓</button>
+                        </div>
+                        <div class="project-details" id="proj1">
+                            <h4>Architecture</h4>
+                            <p>Page Object Model (POM) design pattern with data-driven testing support.</p>
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Parallel execution</li>
+                                <li>Cross-browser testing</li>
+                                <li>Automatic retries</li>
+                            </ul>
+                            <h4>Lessons Learned</h4>
+                            <p>Mastered advanced locator strategies and handling asynchronous operations seamlessly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image-placeholder">
+                            <span>AI Playwright Script Generator</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>AI Script Generator</h3>
+                            <p>Tool utilizing LLMs to automatically generate Playwright test scripts from natural language test cases.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">AI/LLM</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Playwright</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+                                <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            </div>
+                            <button class="expand-btn" onclick="toggleDetails('proj2')">View Details ↓</button>
+                        </div>
+                        <div class="project-details" id="proj2">
+                            <h4>Architecture</h4>
+                            <p>Integrates Gemini API with a custom prompt engineering layer to output executable code.</p>
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Natural language to code</li>
+                                <li>Context-aware generation</li>
+                                <li>Syntax validation</li>
+                            </ul>
+                            <h4>Lessons Learned</h4>
+                            <p>Learned how to effectively structure prompts to ensure reliable code generation from LLMs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image-placeholder">
+                            <span>API Automation</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>API Automation Suite</h3>
+                            <p>Comprehensive API testing suite validating RESTful endpoints with complex data flows.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">RestAssured</span>
+                                <span class="tech-tag">TestNG</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+                                <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            </div>
+                            <button class="expand-btn" onclick="toggleDetails('proj3')">View Details ↓</button>
+                        </div>
+                        <div class="project-details" id="proj3">
+                            <h4>Architecture</h4>
+                            <p>Data-driven framework using external JSON/Excel files for payloads and assertions.</p>
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Schema validation</li>
+                                <li>Auth token management</li>
+                                <li>Dynamic payload generation</li>
+                            </ul>
+                            <h4>Lessons Learned</h4>
+                            <p>Improved understanding of complex JSON parsing and state management between API calls.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card">
+                        <div class="project-image-placeholder">
+                            <span>Automation Dashboard</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Automation Dashboard</h3>
+                            <p>Centralized reporting dashboard aggregating test results from multiple CI/CD pipelines.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+                                <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+                            </div>
+                            <button class="expand-btn" onclick="toggleDetails('proj4')">View Details ↓</button>
+                        </div>
+                        <div class="project-details" id="proj4">
+                            <h4>Architecture</h4>
+                            <p>MERN stack application consuming webhooks from GitHub Actions.</p>
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Real-time metrics</li>
+                                <li>Historical trend analysis</li>
+                                <li>Flaky test detection</li>
+                            </ul>
+                            <h4>Lessons Learned</h4>
+                            <p>Gained full-stack development experience and deeper CI/CD integration knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI in QA Section -->
+        <section id="ai-qa" class="section-padding glass-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>AI for Quality Engineering</h2>
+                    <p>Accelerating automation through Artificial Intelligence.</p>
+                </div>
+                <div class="ai-cards-grid">
+                    <div class="ai-card glass-card">
+                        <h4>Playwright Script Generator</h4>
+                        <p>Generating boilerplates and complex scenarios automatically.</p>
+                    </div>
+                    <div class="ai-card glass-card">
+                        <h4>Test Case Generator</h4>
+                        <p>Extracting test scenarios directly from user stories.</p>
+                    </div>
+                    <div class="ai-card glass-card">
+                        <h4>Bug Summary Generator</h4>
+                        <p>Creating concise, actionable bug reports from logs.</p>
+                    </div>
+                    <div class="ai-card glass-card">
+                        <h4>Locator Generator</h4>
+                        <p>Suggesting the most robust locators based on DOM structure.</p>
+                    </div>
+                    <div class="ai-card glass-card">
+                        <h4>Future AI Projects</h4>
+                        <p>Exploring self-healing tests and visual regression AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Insights & Articles</h2>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card glass-card">
+                        <h4>Playwright Tips</h4>
+                        <p>Advanced strategies for handling flaky tests.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                    <div class="blog-card glass-card">
+                        <h4>Automation Framework</h4>
+                        <p>Architecting for scale and maintainability.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                    <div class="blog-card glass-card">
+                        <h4>GitHub Actions</h4>
+                        <p>Building the perfect CI/CD pipeline for QA.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                    <div class="blog-card glass-card">
+                        <h4>AI in Testing</h4>
+                        <p>How LLMs are changing the testing landscape.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-content glass-card">
+                    <p class="contact-intro">I'm currently looking for new opportunities as an SDET. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@example.com" class="contact-item">
+                            <span class="icon">✉️</span> Email Me
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="contact-item">
+                            <span class="icon">💼</span> LinkedIn
+                        </a>
+                        <a href="https://github.com" target="_blank" class="contact-item">
+                            <span class="icon">💻</span> GitHub
+                        </a>
+                        <a href="docs/resume.pdf" class="contact-item">
+                            <span class="icon">📄</span> Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-    <footer class="copyright">© 2023
-        <a href="https://repl.it/@lilykhan" target="_blank"> Swathi.K.S.</a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>Designed and Developed by</p>
+            <h3>Somashekar KC</h3>
+            <p class="copyright">&copy; 2024 All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- QA Lab Modal Placeholder -->
+    <div id="lab-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-btn" onclick="closeLabModal()">&times;</span>
+            <h3 id="modal-title">Interactive Feature</h3>
+            <p>This interactive feature is currently connected to placeholder endpoints. In a production environment, this would integrate with the Gemini API to demonstrate real-time AI capabilities.</p>
+            <div class="demo-area" id="modal-demo-area">
+                <!-- Dynamic content will be injected here -->
+            </div>
+        </div>
     </div>
 
-
+    <!-- Scripts -->
+    <script src="js/function.js"></script>
 </body>
-
 </html>
