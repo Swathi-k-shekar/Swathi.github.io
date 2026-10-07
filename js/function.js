@@ -54,10 +54,10 @@ function initNavigation() {
    ========================================================================== */
 function initTypewriter() {
     const roles = [
-        "QA Automation Engineer",
         "SDET",
+        "QA Automation Engineer",
+        "Creative Storyteller",
         "Playwright Expert",
-        "Java & JS Developer",
         "AI Automation Enthusiast"
     ];
 
