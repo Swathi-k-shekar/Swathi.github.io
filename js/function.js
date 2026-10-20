@@ -54,11 +54,12 @@ function initNavigation() {
    ========================================================================== */
 function initTypewriter() {
     const roles = [
-        "SDET",
+        "Software Engineer in Test",
         "QA Automation Engineer",
-        "Creative Storyteller",
+        "API Automation ",
         "Playwright Expert",
-        "AI Automation Enthusiast"
+        "AI Automation Enthusiast",
+        "Git Actions and CI/CD Knowledge"
     ];
 
     const typeWriterElement = document.getElementById('typewriter');
