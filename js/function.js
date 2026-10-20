@@ -296,3 +296,26 @@ function createParticle(container) {
 
     container.appendChild(particle);
 }
+
+// Get modal elements
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("fullImage");
+const images = document.querySelectorAll(".project-image");
+
+// Loop through all project images and add click event
+images.forEach(img => {
+    img.addEventListener("click", function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src; // Pass the clicked image source to the modal
+    });
+});
+
+// Close modal function when clicking outside the image or on 'X'
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Prevent closing when clicking directly on the image itself
+modalImg.addEventListener("click", function(event) {
+    event.stopPropagation();
+});
