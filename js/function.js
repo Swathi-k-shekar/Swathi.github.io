@@ -296,3 +296,26 @@ function createParticle(container) {
 
     container.appendChild(particle);
 }
+
+// Image Modal Functionality
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("fullImage");
+const clickableImages = document.querySelectorAll(".clickable-image");
+
+clickableImages.forEach(img => {
+    img.addEventListener("click", function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+    });
+});
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Stop click on full image from closing the backdrop immediately
+if (modalImg) {
+    modalImg.addEventListener("click", function(e) {
+        e.stopPropagation();
+    });
+}
