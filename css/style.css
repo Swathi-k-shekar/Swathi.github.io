@@ -906,3 +906,56 @@ footer h3 {
         left: 21px;
     }
 }
+
+/* Make project images look clickable */
+.project-image {
+    cursor: zoom-in;
+}
+
+/* Modal Background Backdrop */
+.image-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Full Size Image Inside Modal */
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain; /* Keeps entire image visible without cropping */
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.25s ease;
+}
+
+/* Close Button (X) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #38bdf8; /* Accent color on hover */
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

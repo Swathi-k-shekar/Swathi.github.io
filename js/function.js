@@ -297,25 +297,25 @@ function createParticle(container) {
     container.appendChild(particle);
 }
 
-// Image Modal Functionality
+// Get modal elements
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("fullImage");
-const clickableImages = document.querySelectorAll(".clickable-image");
+const images = document.querySelectorAll(".project-image");
 
-clickableImages.forEach(img => {
+// Loop through all project images and add click event
+images.forEach(img => {
     img.addEventListener("click", function() {
         modal.style.display = "flex";
-        modalImg.src = this.src;
+        modalImg.src = this.src; // Pass the clicked image source to the modal
     });
 });
 
+// Close modal function when clicking outside the image or on 'X'
 function closeModal() {
     modal.style.display = "none";
 }
 
-// Stop click on full image from closing the backdrop immediately
-if (modalImg) {
-    modalImg.addEventListener("click", function(e) {
-        e.stopPropagation();
-    });
-}
+// Prevent closing when clicking directly on the image itself
+modalImg.addEventListener("click", function(event) {
+    event.stopPropagation();
+});
